@@ -119,7 +119,9 @@ CFMutableDictionaryRef createOptions() {
 	if (updateBB == false) {
 		CFDictionarySetValue(dOptions, CFSTR("UpdateBaseband"), kCFBooleanFalse);
 	}
-	
+	else {
+		CFDictionarySetValue(dOptions, CFSTR("UpdateBaseband"), kCFBooleanTrue);
+	}
 	CFDictionarySetValue(cOptions, CFSTR("BootOptions"), dOptions);
 	CFDictionarySetValue(cOptions, CFSTR("RestoreOptions"), dOptions);
 	
